@@ -1,0 +1,148 @@
+/* Navbar.css */
+.navbar {
+    background-color: var(--color-surface);
+    padding: 1rem 2rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+  }
+  
+  .navbar-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: var(--color-text);
+    font-weight: bold;
+    font-size: 1.5rem;
+  }
+  
+  .logo-icon {
+    margin-right: 0.5rem;
+    font-size: 1.8rem;
+  }
+  
+  .nav-links {
+    display: flex;
+    gap: 1.5rem;
+    margin: 0 2rem;
+  }
+  
+  .nav-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: var(--color-text-secondary);
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    transition: all 0.3s ease;
+  }
+  
+  .nav-link:hover {
+    color: var(--color-text);
+    background-color: var(--color-surface);
+  }
+  
+  .nav-link.active {
+    color: var(--color-primary);
+  }
+  
+  .nav-icon {
+    margin-right: 0.5rem;
+    font-size: 1.2rem;
+  }
+  
+  .auth-actions {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .auth-btn {
+    display: flex;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+  }
+  
+  .login-btn {
+    color: var(--color-text);
+    background-color: transparent;
+  }
+  
+  .login-btn:hover {
+    background-color: var(--color-surface);
+  }
+  
+  .signup-btn {
+    color: white;
+    background-color: var(--color-primary);
+  }
+  
+  .signup-btn:hover {
+    background-color: var(--color-primary-dark);
+  }
+  
+  .btn-icon {
+    margin-right: 0.5rem;
+  }
+  
+  .wallet-connected {
+    display: flex;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    background-color: var(--color-surface);
+    border-radius: 0.5rem;
+    color: var(--color-text);
+  }
+  
+  .wallet-address {
+    font-family: var(--font-mono);
+    font-size: 0.9rem;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 1024px) {
+    .navbar-container {
+      padding: 0 1rem;
+    }
+    
+    .nav-links {
+      gap: 1rem;
+    }
+    
+    .nav-link {
+      padding: 0.5rem;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .nav-link span {
+      display: none;
+    }
+    
+    .nav-link {
+      padding: 0.5rem;
+    }
+    
+    .auth-btn span {
+      display: none;
+    }
+    
+    .auth-btn {
+      padding: 0.5rem;
+    }
+  }

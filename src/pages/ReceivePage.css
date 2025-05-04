@@ -1,0 +1,103 @@
+.receive-page {
+  padding: 2rem;
+  min-height: 100vh;
+  background-color: var(--background-color);
+}
+
+.receive-container {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.receive-header {
+  margin-bottom: 2rem;
+}
+
+.receive-card {
+  background-color: var(--card-background);
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.qr-code {
+  display: flex;
+  justify-content: center;
+  margin: 2rem 0;
+  padding: 1rem;
+  background-color: white;
+  border-radius: 8px;
+}
+
+.address-display {
+  background-color: var(--background-color);
+  padding: 1rem;
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+  margin: 1.5rem 0;
+}
+
+.address-text {
+  font-family: monospace;
+  word-break: break-all;
+  color: var(--text-primary);
+}
+
+.copy-button {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 1rem;
+  padding: 0.75rem 1.5rem;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.copy-button:hover {
+  background-color: var(--primary-color-dark);
+}
+
+.share-options {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.share-button {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  background-color: var(--background-color);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.share-button:hover {
+  background-color: var(--card-background);
+}
+
+@media (max-width: 768px) {
+  .receive-page {
+    padding: 1rem;
+  }
+  
+  .receive-card {
+    padding: 1.5rem;
+  }
+  
+  .share-options {
+    flex-direction: column;
+  }
+  
+  .share-button {
+    width: 100%;
+    justify-content: center;
+  }
+} 

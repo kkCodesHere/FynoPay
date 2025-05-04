@@ -1,0 +1,29 @@
+.auth-page {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(to bottom right, var(--color-background), var(--color-surface));
+    padding: 2rem;
+    padding-top: 8rem;
+}
+
+.auth-container {
+    width: 100%;
+    max-width: 550px;
+    padding: 1.75rem;
+    background: var(--color-surface);
+    border-radius: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+    .auth-page {
+        padding: 1rem;
+        padding-top: 6rem;
+    }
+    
+    .auth-container {
+        padding: 1.25rem;
+    }
+}

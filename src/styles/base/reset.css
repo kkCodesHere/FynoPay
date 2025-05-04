@@ -1,0 +1,23 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    background-color: var(--color-background);
+    color: var(--color-text);
+    font-family: var(--font-main);
+    line-height: 1.5;
+  }
+  
+  button {
+    cursor: pointer;
+    font: inherit;
+    background: none;
+    border: none;
+  }
+  
+  input {
+    font: inherit;
+  }

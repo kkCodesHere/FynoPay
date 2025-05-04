@@ -1,0 +1,233 @@
+:root {
+  --primary-green: #00D54B;
+  --background-dark: #0A0F1C;
+  --card-dark: #151C31;
+  --text-light: #FFFFFF;
+  --text-secondary: #8F9BB7;
+  --input-background: #1A2137;
+  --input-border: #2A324A;
+}
+
+.signup-form {
+  width: 100%;
+  max-width: 550px;
+  padding: 2.25rem;
+  background: var(--card-dark);
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  position: relative;
+  margin: 5rem auto 2rem;
+  border: 1px solid var(--input-border);
+  min-height: 560px;
+}
+
+.signup-form::before {
+  content: '';
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  right: -1px;
+  bottom: -1px;
+  background: linear-gradient(45deg,
+    var(--primary-green),
+    #3b82f6,
+    #9333ea
+  );
+  border-radius: inherit;
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.signup-form:hover::before {
+  opacity: 0.7;
+}
+
+.signup-form h2 {
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: var(--text-light);
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.signup-form .subtitle {
+  color: var(--primary-green);
+  text-align: center;
+  margin-bottom: 1.75rem;
+  font-size: 0.9rem;
+}
+
+.form-row {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+}
+
+.form-row .form-group {
+  flex: 1;
+  margin-bottom: 0;
+}
+
+.form-group {
+  margin-bottom: 1.25rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.35rem;
+  color: var(--text-light);
+  font-weight: 500;
+  font-size: 0.85rem;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 0.7rem 1rem;
+  background: var(--input-background);
+  border: 1.5px solid #4a5568;
+  border-radius: 8px;
+  color: var(--text-light);
+  font-size: 0.9rem;
+  transition: all 0.2s ease;
+}
+
+.form-group input::placeholder {
+  color: var(--text-secondary);
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: var(--primary-green);
+  box-shadow: 0 0 0 2px rgba(0, 213, 75, 0.1);
+}
+
+.pin-input-wrapper {
+  position: relative;
+}
+
+.toggle-password {
+  position: absolute;
+  right: 0.75rem;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: var(--text-secondary);
+  cursor: pointer;
+  padding: 0.25rem;
+  font-size: 0.9rem;
+}
+
+.toggle-password:hover {
+  color: var(--text-light);
+}
+
+.submit-button {
+  width: 100%;
+  padding: 0.8rem;
+  background-color: var(--primary-green);
+  color: var(--text-light);
+  border: none;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin-top: 1.5rem;
+}
+
+.submit-button:hover:not(:disabled) {
+  opacity: 0.9;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 213, 75, 0.2);
+}
+
+.submit-button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.login-link {
+  text-align: center;
+  margin-top: 1.5rem;
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+}
+
+.login-link a {
+  color: var(--primary-green);
+  text-decoration: none;
+  margin-left: 0.25rem;
+}
+
+.login-link a:hover {
+  text-decoration: underline;
+}
+
+/* Error states */
+.form-group.error input {
+  border-color: #ef4444;
+}
+
+.error-message {
+  color: #ef4444;
+  font-size: 0.75rem;
+  margin-top: 0.25rem;
+}
+
+/* Loading state */
+.submit-button.submitting {
+  position: relative;
+  color: transparent;
+}
+
+.submit-button.submitting::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 1.25rem;
+  height: 1.25rem;
+  margin: -0.625rem 0 0 -0.625rem;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-top-color: white;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 480px) {
+  .signup-form {
+    margin: 4rem 1rem 1rem;
+    padding: 1.75rem;
+    width: calc(100% - 2rem);
+    max-width: none;
+    min-height: 540px;
+  }
+  
+  .form-row {
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .form-group {
+    margin-bottom: 1rem;
+  }
+  
+  .signup-form h2 {
+    font-size: 1.5rem;
+  }
+  
+  .signup-form .subtitle {
+    font-size: 0.85rem;
+    margin-bottom: 1.25rem;
+  }
+}
